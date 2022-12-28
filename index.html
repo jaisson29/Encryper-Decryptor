@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 1 Oracle one</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <main class="row">
+      <div id="logo" class="col-s-12 col-12 col-l-2 col-xl-2">
+        <img id="logoAlura" src="img/logoAlura.svg" />
+      </div>
+      <div id="main" class="col-s-12 col-12 col-l-7 col-xl-7">
+        <!-- Logo Alura -->
+
+        <!-- Section where the user type the message to encrypt or decrypt -->
+        <section id="inputMessageBox">
+          <form action="">
+            <textarea
+              name="message"
+              id="message"
+              cols="20"
+              rows="10"
+              placeholder="Ingrese el texto aquí"
+            ></textarea>
+          </form>
+        </section>
+        <!-- Section where are the buttons to encrypt or decrypt -->
+        <section id="buttoms" class="col-12 col-s-12">
+          <button class="buttom" id="encriptar">Encriptar</button>
+          <button class="buttom" id="desencriptar">Desencriptar</button>
+        </section>
+      </div>
+      <div id="aside" class="col-12 col-s-12 col-l-3 col-xl-3">
+        <!-- Section where the encrypted or decrypted message is displayed -->
+        <section id="showMessageBox">
+          <img class="hideImg" src="img/doll.svg" />
+          <p id="firstText">Ningún mensaje fue encontrado</p>
+          <p id="secondText">
+            ingresa el texto que desees encriptar o desencriptar
+          </p>
+        </section>
+      </div>
+    </main>
+    <script src="script/index.js">
+      
+    </script>
+  </body>
+</html>
