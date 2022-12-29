@@ -12,7 +12,7 @@
       <div id="logo" class="col-s-12 col-12 col-l-2 col-xl-2">
         <img id="logoAlura" src="img/logoAlura.svg" />
       </div>
-      <div id="main" class="col-s-12 col-12 col-l-7 col-xl-7">
+      <div id="main" class="col-s-12 col-12 col-l-6 col-xl-7">
         <!-- Logo Alura -->
 
         <!-- Section where the user type the message to encrypt or decrypt -->
@@ -21,7 +21,7 @@
             <textarea
               name="message"
               id="message"
-              cols="20"
+              cols="100%"
               rows="10"
               placeholder="Ingrese el texto aquí"
             ></textarea>
@@ -29,14 +29,14 @@
         </section>
         <!-- Section where are the buttons to encrypt or decrypt -->
         <section id="buttoms" class="col-12 col-s-12">
-          <button class="buttom" id="encriptar">Encriptar</button>
-          <button class="buttom" id="desencriptar">Desencriptar</button>
+          <button class="buttom" id="encrypt">Encriptar</button>
+          <button class="buttom" id="decrypt">Desencriptar</button>
         </section>
       </div>
-      <div id="aside" class="col-12 col-s-12 col-l-3 col-xl-3">
+      <div id="aside" class="col-12 col-s-12 col-l-4 col-xl-3">
         <!-- Section where the encrypted or decrypted message is displayed -->
         <section id="showMessageBox">
-          <img class="hideImg" src="img/doll.svg" />
+          <img id="doll" class="hideImg" src="img/doll.svg" />
           <p id="firstText">Ningún mensaje fue encontrado</p>
           <p id="secondText">
             ingresa el texto que desees encriptar o desencriptar
@@ -44,8 +44,6 @@
         </section>
       </div>
     </main>
-    <script src="script/index.js">
-      
-    </script>
+    <script src="script/index.js"></script>
   </body>
 </html>

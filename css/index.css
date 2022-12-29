@@ -13,17 +13,31 @@
   float: left;
 }
 
-body {
-  background-color: #f3f5fc;
+html {
+  height: 100%;
+  margin: 40px;
 }
 
-main {
-  width: auto;
-  height: auto;
-  padding: 40px;
+body {
+  background-color: #f3f5fc;
+  height: 100%;
+  /* margin: 40px; */
+}
+
+main{
+  height: 100%;
+}
+
+#main {
+  display: grid;
+  padding-top: 10%;
+  place-items: center;
 }
 
 #logoAlura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 120px;
   height: 48px;
 }
@@ -50,22 +64,31 @@ main {
 }
 
 #showMessageBox {
-  text-align: center;
+  display: grid;
+  place-content: center;
   background-color: #fff;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
   border-radius: 32px;
-  height: 500px;
+  height: 90%;
+}
+
+#aside {
+  height: 100%;
+}
+
+#doll {
+  width: 100%;
 }
 
 #buttoms {
   float: left;
-  gap: 24px;
   bottom: 72px;
   left: 25%;
   text-align: center;
 }
 
 .buttom {
+  margin: 5px;
   border-radius: 24px;
   width: 328px;
   height: 67px;
@@ -74,12 +97,12 @@ main {
   line-height: 19px;
 }
 
-#encriptar {
+#encrypt {
   background-color: #0A3871;
   color: #fff;
 }
 
-#desencriptar {
+#decrypt {
   background-color: transparent;
   color: #0A3871;
 }
@@ -95,6 +118,15 @@ main {
   color: #343A40;
 }
 
+#secondText {
+  width: 100%;
+  font-family: 'Inter';
+  font-style: normal;
+  line-height: 120%;
+  text-align: center;
+  color: #343a40cb;
+}
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -106,7 +138,7 @@ main {
     display: none;
   }
 
-  main {
+  #main {
     display: inline-block;
     padding: 0;
   }
@@ -131,8 +163,7 @@ main {
     display: none;
   }
 
-  main {
-    text-align: center;
+  #main {
     margin: 0 auto;
   }
 }
@@ -171,6 +202,10 @@ main {
   .col-l-10 {width: 83.33%;}
   .col-l-11 {width: 91.66%;}
   .col-l-12 {width: 100%;}
+
+  #main {
+    margin: 0 auto;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
