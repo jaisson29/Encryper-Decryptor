@@ -128,7 +128,7 @@ main{
 #firstText {
   width: 100%;
   height: auto;
-  /* word-wrap: break-word; */
+  word-wrap: break-word;
   hyphens: auto;
   font-family: 'Inter';
   font-style: normal;

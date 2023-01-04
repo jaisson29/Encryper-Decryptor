@@ -10,7 +10,7 @@ const paragraph2 = document.getElementById('secondText')
 // Image in the aside
 const doll = document.getElementById('doll')
 // Clipboard Button
-// const clipboard = document.getElementById('clipboardButton')
+const clipboard = document.getElementById('clipboardButton')
 
 // Auto focus the cursor into the textarea
 message.focus()
@@ -23,7 +23,7 @@ encryptButton.onclick = function () {
     doll.style.display = 'none'
     paragraph1.textContent = encrypted
     paragraph2.textContent = ''
-    // clipboard.style.display = 'block'
+    clipboard.style.display = 'block'
     // alert(encrypted)
   } else {
     alert('Debes de ingresar un texto para continuar')
@@ -38,19 +38,41 @@ decryptButton.onclick = function () {
     doll.style.display = 'none'
     paragraph1.textContent = dencrypted
     paragraph2.textContent = ''
-    // clipboard.style.display = 'block'
+    clipboard.style.display = 'block'
     // alert(dencrypted)
-  } else {
+    } else {
     alert('Debes de ingresar un texto para continuar')
   }
 }
 
 // Button onClick save the final message to the clipboard
 clipboard.onclick = function () {
-  let texto = paragraph1.textContent
-  texto.select()
-  navigator.clipboard.readText(message.value)
-  texto.value = ''
+  let text = paragraph1.textContent
+  if (!navigator.clipboard) {
+    // Clipboard API not available
+    return
+  }
+  navigator.clipboard.writeText(text)
+      .then(() => {
+      alert("Text copied to clipboard")
+    })
+    .catch(err => {
+      alert('Could not copy to clipboard\nAn unexpected error occurred while copying to clipboard')
+      console.log('Something went wrong', err);
+  })
+}
+
+function copyToClickBoard(){
+  var content = document.getElementById('textArea').innerHTML;
+
+  navigator.clipboard.writeText(content)
+      .then(() => {
+      console.log("Text copied to clipboard...")
+  })
+      .catch(err => {
+      console.log('Something went wrong', err);
+  })
+
 }
 
 // Function to replace the characters to encrypt
