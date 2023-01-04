@@ -73,7 +73,7 @@ main{
   word-wrap: break-word;
 }
 
-/* .clipboardContainer {
+.clipboardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,7 +88,7 @@ main{
   border: none;
   font-size: 40px;
   padding-top: 100px;
-} */
+}
 
 #aside {
   height: 100%;
