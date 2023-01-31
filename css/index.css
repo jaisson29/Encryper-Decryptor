@@ -103,6 +103,8 @@ main {
   bottom: 72px;
   left: 25%;
   text-align: center;
+  /* display: grid;
+  place-content: center; */
 }
 
 .buttom {
